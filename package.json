@@ -1,9 +1,6 @@
 {
   "name": "link-it-pocket-portfolio",
   "version": "1.0.0",
-  "engines": {
-    "node": "8.10.0"
-  },
   "main": "index.js",
   "author": "Oto Drahonovsky",
   "license": "MIT",

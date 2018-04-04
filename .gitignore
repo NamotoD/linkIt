@@ -1,10 +1,4 @@
 node_modules/
-public/dist/
-public/inc/
-public/images/
-public/publicPage/inc/
-public/publicPage/images/
-src/playground/
 .env.test
 .env.development
 yarn-error.log
