@@ -5,8 +5,11 @@
 .header__content {
     align-items: center;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: $s-size 0;
+    @media (min-width: $desktop-breakpoint) {
+        justify-content: space-between;
+    }
 }
 
 .header__title {

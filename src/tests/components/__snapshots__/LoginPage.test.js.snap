@@ -10,10 +10,10 @@ exports[`should render LoginPage correctly 1`] = `
     <h1
       className="layout__title"
     >
-      Boilerplate
+      linkIt
     </h1>
     <p>
-      Tag line for app.
+      Your Pocket Portfolio.
     </p>
     <button
       className="button"
