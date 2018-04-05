@@ -8,7 +8,7 @@ import Profile from '../components/profile/Profile';
 import About from '../components/about/About';
 import Projects from '../components/projects/Projects';
 import Skills from '../components/skills/Skills';
-// import Testimonials from '../components/testimonials/Testimonials';
+import Testimonials from '../components/testimonials/Testimonials';
 import Stats from '../components/stats/Stats';
 import Experience from '../components/experience/Experience';
 import AddProjectPage from '../components/projects/AddProjectPage';
@@ -42,7 +42,7 @@ const AppRouter = () => (
                 <PrivateRoute path="/projects" component={Projects} />
                 <PrivateRoute path="/skills" component={Skills} />
                 <PrivateRoute path="/experience" component={Experience} />
-                {/*<PrivateRoute path="/testimonials" component={Testimonials} />*/}
+                <PrivateRoute path="/testimonials" component={Testimonials} />
                 <PrivateRoute path="/stats" component={Stats} />
                 <PrivateRoute path="/createProject" component={AddProjectPage} />
                 <PrivateRoute path="/createSkill" component={AddSkillPage} />
