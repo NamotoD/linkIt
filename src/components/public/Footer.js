@@ -110,8 +110,7 @@ class Footer extends React.Component {
                     <div className="col-twelve">
                         <div className="copyright">
                             <span>© Copyright LinkIt 2018</span>
-                            <span>Design by <a href="https://www.styleshout.com/">styleshout</a></span>
-                            <span>Design by <a href='https://www.freepik.com/free-photo/user-people-network-circuit-board-link-connection-technology_1198382.htm'>Designed by Freepik</a></span>
+                            <span>Design by <a href="https://www.styleshout.com/"> styleshout</a></span><span><a href='https://www.freepik.com/free-photo/user-people-network-circuit-board-link-connection-technology_1198382.htm'>Freepik</a></span>
                         </div>
                         <div className="go-top">
                             <Link className="smoothscroll" to={"#top"} title="Back to Top"><i className="im im-arrow-up" aria-hidden="true" /></Link>

@@ -21,12 +21,12 @@ export class Skills extends React.Component {
 			<div>
 				<div className="page-header">
 					<div className="content-container">
-					<Avatar />
+						<Avatar />
 						<h1 className="page-header__title">Skills</h1>
 					</div>
 				</div>
 				<div className="content-container">
-					<p>On this page you can manage your skills. 
+					<p>On this page you can manage your skills.
 					Press Add Skill button below to add a new skill,
 					or edit your skills listed below.</p>
 				</div>

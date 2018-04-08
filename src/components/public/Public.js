@@ -108,7 +108,7 @@ export class Public extends React.Component {
         }, 10000);
     };
     componentWillUnmount() {
-        window.location.reload();
+        // window.location.reload();
 
     };
 

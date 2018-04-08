@@ -1,5 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import Paper from 'material-ui/Paper';
 import database, { storage } from '../../firebase/firebase';
 import ReactDOM from 'react-dom';
 import Files from 'react-files';
@@ -8,6 +12,16 @@ import { showError } from '../../utils/firebase';
 import Avatar from '../../components/profile/Avatar';
 import UploadArea from '../../components/materialUI/UploadArea';
 import ProgressBar from '../../components/materialUI/ProgressBar';
+
+const style = {
+    paper: {
+        // display: 'inline-block',
+        // float: 'left',
+        margin: '0',
+        // paddingRight: '100px',
+        height: '100%'
+    }
+};
 
 export class CoverImage extends React.Component {
 	constructor(props) {
@@ -79,39 +93,41 @@ export class CoverImage extends React.Component {
 
 	render() {
 		return (
-			<div>
-				<div className="page-header">
-					<div className="content-container">
-					<Avatar />
-						<h1 className="page-header__title">Cover Image</h1>
+			<MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
+				<Paper style={style.paper}>
+					<div className="page-header">
+						<div className="content-container">
+							<Avatar />
+							<h1 className="page-header__title">Cover Image</h1>
+						</div>
 					</div>
-				</div>
-				<div className="content-container">
-					{this.state.error && <p className="form__error">{this.state.error}</p>}
-					<Files
-						className='files-dropzone'
-						onChange={this.onFilesChange}
-						onError={this.onFilesError}
-						accepts={['image/*']}
-						multiple={false}
-						//maxFiles={1}
-						maxFileSize={1000000} //1mb
-						minFileSize={0}
-						clickable
-						dropActiveClassName='files-dropzone-active'
-					>
-						<p>Upload .png or .jpg  or .gif files only</p>
-						<p>The cover image has to be 3000x2000 px and less than 1Mb.</p>
-						{(!this.props.userProfile || !this.props.userProfile.CoverImage || !this.props.userProfile.CoverImage.url) && <p>Provide Cover Image or leave the default</p>}
-						<UploadArea />
-						{this.state.progressOn && <ProgressBar />}
+					<div className="content-container">
+						{this.state.error && <p className="form__error">{this.state.error}</p>}
+						<Files
+							className='files-dropzone'
+							onChange={this.onFilesChange}
+							onError={this.onFilesError}
+							accepts={['image/*']}
+							multiple={false}
+							//maxFiles={1}
+							maxFileSize={1000000} //1mb
+							minFileSize={0}
+							clickable
+							dropActiveClassName='files-dropzone-active'
+						>
+							<p>Upload .png or .jpg  or .gif files only</p>
+							<p>The cover image has to be 3000x2000 px and less than 1Mb.</p>
+							{(!this.props.userProfile || !this.props.userProfile.CoverImage || !this.props.userProfile.CoverImage.url) && <p>Provide Cover Image or leave the default</p>}
+							<UploadArea />
+							{this.state.progressOn && <ProgressBar />}
 
-					</Files>
-					<p>Click above area to replace cover image, or simply drop new image on top of the current.</p>
-					<p>This will be the background on your portfolio page</p>
-					{/*<progress value="0" max="100" id="uploader">0%</progress>*/}
-				</div>
-			</div>
+						</Files>
+						<p>Click above area to replace cover image, or simply drop new image on top of the current.</p>
+						<p>This will be the background on your portfolio page</p>
+						{/*<progress value="0" max="100" id="uploader">0%</progress>*/}
+					</div>
+				</Paper>
+			</MuiThemeProvider>
 		);
 	}
 };

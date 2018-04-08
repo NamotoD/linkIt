@@ -5,6 +5,10 @@
     font-weight: 300;
     padding: $s-size;
 }
+input[type="text"] {
+    color: rgb(255, 255, 255);
+
+}
 
 .select {
     @extend .text-input;
@@ -13,4 +17,6 @@
 .textarea {
     @extend .text-input;
     height: 10rem;
+    width: 100vw;
+    color: rgb(255, 255, 255);
 }
