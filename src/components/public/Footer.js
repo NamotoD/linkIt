@@ -14,9 +14,6 @@ class Footer extends React.Component {
             <footer>
                 <div className="row">
                     <div className="col-full">
-                        <div className="footer-logo">
-                            <a className="footer-site-logo" onClick={this.goToDashboard} href="#0"><img src="/publicPage/images/logo.png" alt="Homepage" /></a>
-                        </div>
                         <ul className="footer-social">
                             {(this.props.user && this.props.user.emailPrimary) &&
                                 <li><a href={"mailto:" + this.props.user.emailPrimary}>
@@ -104,6 +101,9 @@ class Footer extends React.Component {
                                     <span>GooglePlay</span>
                                 </a></li>}
                         </ul>
+                        <div className="footer-logo">
+                            <a className="footer-site-logo" onClick={this.goToDashboard} href="#0"><img src="/publicPage/images/logo.png" alt="Homepage" /></a>
+                        </div>
                     </div>
                 </div>
                 <div className="row footer-bottom">

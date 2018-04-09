@@ -1,0 +1,15 @@
+
+ 
+ 
+ 
+ /* ===================================================================
+  * # home - (_site-layout.scss)
+  * # To FIX the parallax min-size
+  * ------------------------------------------------------------------- */
+ 
+  .s-home {
+    @media (min-width: $desktop-breakpoint) {
+        min-height: 1080px;
+    }
+    min-height: 768px;
+}
