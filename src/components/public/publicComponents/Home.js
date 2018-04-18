@@ -20,8 +20,8 @@ const Home = (props) => (
                 {(props.user && props.user.greeting) &&
                     <h3>{props.user.greeting}</h3>}
                 <h1>
-                    I am {(props.user && props.user.firstName) && props.user.firstName} {(props.user && props.user.lastName) && props.user.lastName}. <br />
-                    I am a {(props.user && props.user.occupation) && props.user.occupation} <br />
+                    My name is {(props.user && props.user.firstName) && props.user.firstName} {(props.user && props.user.lastName) && props.user.lastName}. <br />
+                    I am a {(props.user && props.user.occupation) && props.user.occupation},  <br />
                     based in {(props.user && props.user.location) && props.user.location}.
                 </h1>
                 <div className="home-content__buttons">
